@@ -1,4 +1,21 @@
 ﻿<html>
+<head>
+    <style>
+        body {
+            background-color: gray;
+            color:azure;
+        }
+
+        h1 {
+            background-color: #8ebf42;
+            color: azure;
+        }
+
+        p {
+            background-color: #1c87c9;
+        }
+    </style>
+</head>
 <body>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <h1>HybridWebView Test</h1>
@@ -10,19 +27,15 @@
     <br />
     <p id="result">Result:</p>
     <script type="text/javascript">
-        function log(str)
-        {
+        function log(str) {
             $('#result').text($('#result').text() + " " + str);
         }
-        function invokeCSCode(data)
-        {
-            try
-            {
-                log("Sending Data:" + data);
+        function invokeCSCode(data) {
+            try {
+                log("Sending Data: " + data);
                 invokeCSharpAction(data);
             }
-            catch (err)
-            {
+            catch (err) {
                 log(err);
             }
         }

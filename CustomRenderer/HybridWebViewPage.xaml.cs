@@ -7,10 +7,6 @@ namespace CustomRenderer
 {
     public partial class HybridWebViewPage : ContentPage
     {
-        /*private void InitializeComponenet()
-        {
-            throw new NotImplementedException();
-        }*/
         public HybridWebViewPage()
         {
             InitializeComponent();

@@ -2,17 +2,14 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Core;
 using Xamarin.Forms.Xaml;
-
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace CustomRenderer
-{
-    
+{    
     public class App : Application
     {
         public App()
         {
-            MainPage = new HybridWebViewPage();
-            
+            MainPage = new HybridWebViewPage();            
         }
         protected override void OnStart()
         {

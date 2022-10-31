@@ -14,7 +14,6 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-
 namespace CustomRenderer.UWP
 {
     /// <summary>
@@ -29,9 +28,8 @@ namespace CustomRenderer.UWP
         public App()
         {
             this.InitializeComponent();
-            this.Suspending += OnSuspending;
+            this.Suspending += OnSuspending;          
         }
-
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
         /// will be used such as when the application is launched to open a specific file.
@@ -46,7 +44,6 @@ namespace CustomRenderer.UWP
                         }
             #endif
             Frame rootFrame = Window.Current.Content as Frame;
-
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
             if (rootFrame == null)
@@ -55,16 +52,13 @@ namespace CustomRenderer.UWP
                 rootFrame = new Frame();
                 rootFrame.NavigationFailed += OnNavigationFailed;
                 Xamarin.Forms.Forms.Init(e);
-
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
                     //TODO: Load state from previously suspended application
                 }
-
                 // Place the frame in the current Window
                 Window.Current.Content = rootFrame;
             }
-
             //if (e.PrelaunchActivated == false)
             //{
                 if (rootFrame.Content == null)
@@ -78,7 +72,6 @@ namespace CustomRenderer.UWP
                 Window.Current.Activate();
             //}
         }
-
         /// <summary>
         /// Invoked when Navigation to a certain page fails
         /// </summary>
@@ -88,7 +81,6 @@ namespace CustomRenderer.UWP
         {
             throw new Exception("Failed to load Page " + e.SourcePageType.FullName);
         }
-
         /// <summary>
         /// Invoked when application execution is being suspended.  Application state is saved
         /// without knowing whether the application will be terminated or resumed with the contents
